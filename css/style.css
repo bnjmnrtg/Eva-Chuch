@@ -12,3 +12,11 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+li{
+	color: white;
+}
+
+li:hover {
+	color: #1a324b;
+}
