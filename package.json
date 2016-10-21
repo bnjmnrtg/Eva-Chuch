@@ -1,0 +1,32 @@
+{
+  "name": "eva-church",
+  "version": "1.0.0",
+  "description": "church operations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnjmnrtg/Eva-Chuch.git"
+  },
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.9.5"
+  },
+  "keywords": [
+    "scheduling"
+  ],
+  "author": "Benjamin Arteaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bnjmnrtg/Eva-Chuch/issues"
+  },
+  "homepage": "https://github.com/bnjmnrtg/Eva-Chuch#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "request": "^2.75.0"
+  }
+}
