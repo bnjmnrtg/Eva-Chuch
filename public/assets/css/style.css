@@ -24,3 +24,7 @@ li:hover {
 #current{
 	border-bottom: #ff9800 solid 5px;
 }
+
+.pagination li.active a:hover{
+	background-color: #1a324b;
+}
