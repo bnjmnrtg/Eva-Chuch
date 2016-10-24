@@ -2,22 +2,22 @@
 var leaders = [
 	{
 		'id':'#arturo',
-		'name': 'Arturo Soto',
+		'name': ' Arturo Soto',
 		'phoneNumber': '(512)-555-1111'
 	},
 	{
 		'id':'#alejandro',
-		'name': 'Alejandro Martinez',
+		'name': ' Alejandro Martinez',
 		'phoneNumber': '(512)-555-2222'
 	},
 	{
 		'id':'#juan',
-		'name': 'Juan Marquez',
+		'name': ' Juan Marquez',
 		'phoneNumber': '(512)-555-3333'
 	},
 	{
 		'id':'#israel',
-		'name': 'Israel Jaimes',
+		'name': ' Israel Jaimes',
 		'phoneNumber': '(512)-555-4444'
 	}
 ];
@@ -43,15 +43,15 @@ var leaders = [
 // ===========Cleaning Schedule ======================
 var families = [
 	{
-		'id': 0,
+		'id': 1,
 		'family': 'Fam Martinez'
 	},
 	{
-		'id': 1,
+		'id': 2,
 		'family': 'Fam Devers'
 	},
 	{
-		'id': 2,
+		'id': 3,
 		'family': 'Fam Soto'
 	},
 	{
@@ -59,52 +59,53 @@ var families = [
 		'family': 'Maria Martinez/Virginia'
 	},
 	{
-		'id': 4,
+		'id': 5,
 		'family': 'Fam Alcauter(Jaime)'
 	},
 	{
-		'id': 5,
+		'id': 6,
 		'family': 'Fam Guerra'
 	},
 	{
-		'id': 6,
+		'id': 7,
 		'family': 'Fam Arteaga'
 	},
 	{
-		'id': 7,
+		'id': 8,
 		'family': 'Fam Marquez'
 	},
 	{
-		'id': 8,
+		'id': 9,
 		'family': 'Leticia Garcia/ Martha Espinoza'
 	},
 	{
-		'id': 9,
+		'id': 10,
 		'family': 'Fam Colima'
 	},
 	{
-		'id': 10,
+		'id': 11,
 		'family': 'Fam Ortega'
 	},
 	{
-		'id': 11,
+		'id': 12,
 		'family': 'Fam Alcauter(Batseba)'
 	},
 	{
-		'id': 12,
+		'id': 13,
 		'family': 'Claudia Medina/Connie Rodriguez'
 	},
 	{
-		'id': 13,
+		'id': 14,
 		'family': 'Fam Jaimes/Chagollan'
 	}
 ];
 var currentDay = moment().format('MM/DD/YYYY');
+// ++++++ To add the next cycle add 7 days to the last day that appears on the list ++++++
 var addweek =moment('12/10/2016','MM/DD/YYYY').format('MM/DD/YYYY');
 var test = moment('12/17/2016');
 
 for (var i = 0; i < families.length; i++) {
-	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].family+'</td><td>'+addweek+'</td></tr>');
+	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].id+'</td><td>'+families[i].family+'</td><td>'+addweek+'</td></tr>');
 	addweek =  moment(addweek).add(7, 'days').format('MM/DD/YYYY');
 }
 
