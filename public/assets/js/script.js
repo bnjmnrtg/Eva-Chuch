@@ -40,52 +40,74 @@ var leaders = [
 
 	});
 
-// ===========Working Product======================
-// $('#arturo').click(function(){
-// 	$('#arturo').html("Hmn. Arturo Soto (512)-555-1111");
-// 	var clicks = $(this).data('clicks');
-// 	if (clicks) {
-// 		$('#arturo').html("Hmn. Arturo Soto");
-// 	}
-// 	else{
-// 		$('#arturo').html("Hmn. Arturo Soto (512)-555-5555");
+// ===========Cleaning Schedule ======================
+var families = [
+	{
+		'id': 0,
+		'family': 'Fam Martinez'
+	},
+	{
+		'id': 1,
+		'family': 'Fam Devers'
+	},
+	{
+		'id': 2,
+		'family': 'Fam Soto'
+	},
+	{
+		'id': 4,
+		'family': 'Maria Martinez/Virginia'
+	},
+	{
+		'id': 4,
+		'family': 'Fam Alcauter(Jaime)'
+	},
+	{
+		'id': 5,
+		'family': 'Fam Guerra'
+	},
+	{
+		'id': 6,
+		'family': 'Fam Arteaga'
+	},
+	{
+		'id': 7,
+		'family': 'Fam Marquez'
+	},
+	{
+		'id': 8,
+		'family': 'Leticia Garcia/ Martha Espinoza'
+	},
+	{
+		'id': 9,
+		'family': 'Fam Colima'
+	},
+	{
+		'id': 10,
+		'family': 'Fam Ortega'
+	},
+	{
+		'id': 11,
+		'family': 'Fam Alcauter(Batseba)'
+	},
+	{
+		'id': 12,
+		'family': 'Claudia Medina/Connie Rodriguez'
+	},
+	{
+		'id': 13,
+		'family': 'Fam Jaimes/Chagollan'
+	}
+];
+var currentDay = moment().format('MM/DD/YYYY');
+var addweek =moment('12/10/2016','MM/DD/YYYY').format('MM/DD/YYYY');
+var test = moment('12/17/2016');
 
-// 	}
-// 	$(this).data("clicks", !clicks);
-// });
-// $('#alejandro').click(function(){
-// 	$('#alejandro').html("Hmn. Alejandro Martinez (512)-555-5555");
-// 	var clicks = $(this).data('clicks');
-// 	if (clicks) {
-// 		$('#alejandro').html("Hmn. Alejandro Martinez");
-// 	}
-// 	else{
-// 		$('#alejandro').html("Hmn. Alejandro Martinez (512)-555-5555");
-// 	}
-// 	$(this).data("clicks", !clicks);
-// });
-// $('#juan').click(function(){
-// 	$('#juan').html("Hmn. Juan Marquez (512)-555-5555");
-// 	var clicks = $(this).data('clicks');
-// 	if (clicks) {
-// 		$('#juan').html("Hmn. Juan Marquez");
-// 	}
-// 	else{
-// 		$('#juan').html("Hmn. Juan Marquez (512)-555-5555");
-// 	}
-// 	$(this).data("clicks", !clicks);
-// });
-// $('#israel').click(function(){
-// 	$('#israel').html("Hmn. Israel Jaimes (512)-555-5555");
-// 	var clicks = $(this).data('clicks');
-// 	if (clicks) {
-// 		$('#israel').html("Hmn. Israel Jaimes");
-// 	}
-// 	else{
-// 		$('#israel').html("Hmn. Israel Jaimes (512)-555-5555");
-// 	}
-// 	$(this).data("clicks", !clicks);
-// });
+for (var i = 0; i < families.length; i++) {
+	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].family+'</td><td>'+addweek+'</td></tr>');
+	addweek =  moment(addweek).add(7, 'days').format('MM/DD/YYYY');
+}
+
 // =======================================================================
 
 
