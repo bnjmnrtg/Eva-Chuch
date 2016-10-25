@@ -101,16 +101,23 @@ var families = [
 ];
 var currentDay = moment().format('MM/DD/YYYY');
 // ++++++ To add the next cycle add 7 days to the last day that appears on the list ++++++
-var addweek =moment('12/10/2016','MM/DD/YYYY').format('MM/DD/YYYY');
-var test = moment('12/17/2016');
+var test = moment('12/03/2016','MM/DD/YYYY').format('MM/DD/YYYY');
+var weeks = [];
+
 
 for (var i = 0; i < families.length; i++) {
-	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].id+'</td><td>'+families[i].family+'</td><td>'+addweek+'</td></tr>');
-	addweek =  moment(addweek).add(7, 'days').format('MM/DD/YYYY');
-}
+	// this will add 7 days to the week that is set a
+	test =  moment(test).add(7, 'days').format('MM/DD/YYYY');
+	weeks.push(test);
+	// this will display all the stuff on the table.
+	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].id+'</td><td>'+families[i].family+'</td><td>'+weeks[i]+'</td></tr>');
+
+	if (weeks[i] === currentDay) {
+		$('#'+families[i].id).remove();
+	}
+};
 
 // =======================================================================
-
 
 
 // ============================ Fizz Buzz ================================
