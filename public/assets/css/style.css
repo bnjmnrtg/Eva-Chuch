@@ -28,3 +28,7 @@ li:hover {
 .pagination li.active a:hover{
 	background-color: #1a324b;
 }
+
+.tabs{
+	margin-bottom: 30px;
+}
