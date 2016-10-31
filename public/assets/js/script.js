@@ -101,7 +101,7 @@ var families = [
 ];
 var currentDay = moment().format('MM/DD/YYYY');
 // ++++++ To add the next cycle add 7 days to the last day that appears on the list ++++++
-var test = moment('12/03/2016','MM/DD/YYYY');
+var test = moment('12/03/2016');
 // ++++++ This one will give us the day before the next person goes to remove the current person off list ++++++
 var lastDayTest = moment('12/09/2016','MM/DD/YYYY');
 var weeks = [];
@@ -110,7 +110,7 @@ var lastday = [];
 
 for (var i = 0; i < families.length; i++) {
 	// this will add 7 and 13 days to the week that is set on the list and the day before the next person
-	test =  moment(test).add(7, 'days').format('MM/DD/YYYY');
+	test = moment(test).add(7, 'days').format('MM/DD/YYYY');
 	lastDayTest = moment(lastDayTest).add(7, 'days').format('MM/DD/YYYY');
 	// pushes to the array that were set abouve
 	weeks.push(test);
@@ -118,8 +118,8 @@ for (var i = 0; i < families.length; i++) {
 	// this will display all the stuff on the table.
 	$('.list').append('<tr id="'+families[i].id+'"><td>'+families[i].id+'</td><td>'+families[i].family+'</td><td>'+weeks[i]+'</td></tr>');
 	// this will check the date in the array and the current date and remove whatever family has it next
-	if (lastday[i] === currentDay) {
-		$('#'+families[i].id).remove();
+	if (weeks[i] === currentDay) {
+		$('#'+families[i].id).attr("style","background-color:yellow;");
 	}
 };
 console.log(lastday);
