@@ -32,3 +32,9 @@ li:hover {
 .tabs{
 	margin-bottom: 30px;
 }
+
+#fixedFooter{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
