@@ -5168,7 +5168,7 @@ button.btn-floating {
 .waves-effect {
   position: relative;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5179,6 +5179,7 @@ button.btn-floating {
   z-index: 1;
   will-change: opacity, transform;
   transition: all .3s ease-out;
+  vertical-align: middle;
 }
 
 .waves-effect .waves-ripple {
